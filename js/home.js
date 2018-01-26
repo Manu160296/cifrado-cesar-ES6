@@ -6,9 +6,9 @@ window.addEventListener('load', () => {
   let originalText = document.querySelector('.original-text-js');
   let result = document.querySelector('.result-js');
 
-  // variables relacionadas a las funciones:
-  let pattern = /[a-zA-Z]/;
-  let spacesToRun = 33;
+  // constantes relacionadas a las funciones:
+  const pattern = /[a-zA-Z]/;
+  const spacesToRun = 33;
 
   // agregando evento click al botón cipher:
   buttonCipher.addEventListener('click', () => {
