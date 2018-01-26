@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap-grid.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body class="bg-principal">
+  <div class="container-fluid bg-principal bg-100">
+    <div class="row bg-grad">
+      <h1 class="text-white">Transforma tu mensaje</h1>
+    </div>
+    <div class="row container">
+      <div class="d-none d-sm-block col-sm-6 height flexbox ">
+        <div class="container height flexbox">
+          <img src="../assets/images/padlock.png" alt="" class="img-size">
+
+        </div>
+
+      </div>
+      <div class=" col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Mensaje</label>
+          <textarea class="form-control text-area-js" id="exampleFormControlTextarea1" rows="4"></textarea>
+          <br>
+          <button class="cipher-js btn btn-outline-info btn-lg">Cifrar</button>
+          <button class="decipher-js btn btn-outline-info btn-lg">Descifrar</button>
+
+        </div>
+        <div class="result--styles ">
+          <span class="text-white "> Mensaje original :</span>
+          <p class=" text-white text-justify original-text-js"> </p>
+
+          <span class="text-white font-weight-bold span-decipher-js"> Mensaje cifrado :</span>
+          <p class="text-justify  font-weight-bold text-white result-js"> </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+
+</html>
