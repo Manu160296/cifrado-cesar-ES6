@@ -1,16 +1,17 @@
-window.addEventListener('load', function() {
-  var textArea = document.querySelector('.text-area-js');
-  var buttonCipher = document.querySelector('.cipher-js');
-  var buttonDecipher = document.querySelector('.decipher-js');
-  var originalText = document.querySelector('.original-text-js');
-  var result = document.querySelector('.result-js');
+window.addEventListener('load', () => {
+  // elementos del dom :
+  let textArea = document.querySelector('.text-area-js');
+  let buttonCipher = document.querySelector('.cipher-js');
+  let buttonDecipher = document.querySelector('.decipher-js');
+  let originalText = document.querySelector('.original-text-js');
+  let result = document.querySelector('.result-js');
 
   // variables relacionadas a las funciones:
-  var pattern = /[a-zA-Z]/;
-  var spacesToRun = 33;
+  let pattern = /[a-zA-Z]/;
+  let spacesToRun = 33;
 
-  buttonCipher.addEventListener('click', function() {
-    var string = textArea.value;
+  buttonCipher.addEventListener('click', () => {
+    let string = textArea.value;
     if (string && pattern.test(string)) {
       cipher(string);
       textArea.value = '';
@@ -19,9 +20,9 @@ window.addEventListener('load', function() {
     }
   });
 
-  buttonDecipher.addEventListener('click', function() {
+  buttonDecipher.addEventListener('click', () => {
     console.log('descifrar');
-    var string = textArea.value;
+    let string = textArea.value;
     if (string && pattern.test(string)) {
       decipher(string);
       textArea.value = '';
@@ -30,12 +31,12 @@ window.addEventListener('load', function() {
     }
   });
 
-  function cipher(string) {
-    var stringCipher = '';
-    var temp = 0;
-    var letterCipher = '';
+  const cipher = (string) => {
+    let stringCipher = '';
+    let temp = 0;
+    let letterCipher = '';
 
-    for (var i = 0; i < string.length; i++) {
+    for (let i = 0; i < string.length; i++) {
       if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
         temp = (string.charCodeAt(i) - 65 + spacesToRun) % 26 + 65;
         letterCipher = String.fromCharCode(temp);
@@ -51,16 +52,16 @@ window.addEventListener('load', function() {
     }
     originalText.textContent = string;
     result.textContent = stringCipher;
-  }
+  };
 
-  function decipher(string) {
-    var stringDecipher = '';
-    var temp = 0;
-    var letterDecipher = '';
-    var span = document.querySelector('.span-decipher-js');
-    var spacesToRun = 33;
+  const decipher = (string) => {
+    let stringDecipher = '';
+    let temp = 0;
+    let letterDecipher = '';
+    let span = document.querySelector('.span-decipher-js');
+    let spacesToRun = 33;
 
-    for (var i = 0; i < string.length; i++) {
+    for (let i = 0; i < string.length; i++) {
       if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90) {
         temp = (string.charCodeAt(i) + 65 - spacesToRun) % 26 + 65;
         letterDecipher = String.fromCharCode(temp);
@@ -77,5 +78,5 @@ window.addEventListener('load', function() {
     span.textContent = 'Mensaje descifrado';
     originalText.textContent = string;
     result.textContent = stringDecipher;
-  }
+  };
 });

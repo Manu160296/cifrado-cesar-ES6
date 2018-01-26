@@ -1,7 +1,7 @@
-window.addEventListener('load', function() {
-  var btnHome = document.querySelector('.btn-home-js');
+window.addEventListener('load', () => {
+  let btnHome = document.querySelector('.btn-home-js');
 
-  btnHome.addEventListener('click', function() {
+  btnHome.addEventListener('click', () => {
     console.log('click');
     window.location.href = 'views/home.html';
   });
