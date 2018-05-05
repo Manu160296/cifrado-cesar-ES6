@@ -2,7 +2,7 @@
 
 * **Track:** _Specialization_
 * **Curso:** _JS DEEP DIVE: CREA TU PROPIA LIBRERÍA USANDO JAVASCRIPT_
-* **Unidad:** _Fundamentos de javascript_
+* **Unidad:** _Fundamentos de Javascript_
 
 ***
 ## Descripción del proyecto:
